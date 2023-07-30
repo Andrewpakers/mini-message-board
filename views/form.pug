@@ -1,0 +1,14 @@
+extends layout
+
+block content 
+    h1(class='my-3 text-5xl font-bold')= title
+    p(class='my-3 text-lg') Send a message
+    form(action='', method='POST', class='flex flex-col items-center')
+        div(class='flex gap-3 mb-3')
+            div(class='flex flex-col gap-2')
+                label(for='name') Name:
+                label(for='message') Message: 
+            div(class='flex flex-col gap-2')
+                input#name(class='pl-1 border-solid border-2 border-black rounded-lg' type="text" name='user' required='true')
+                input#message(class='pl-1 border-solid border-2 border-black rounded-lg' type="text" name='text' required='true')
+        button(class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded' type='submit') Send
